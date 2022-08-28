@@ -63,7 +63,7 @@ git remote -v
 
 To setup CI/CD pipeline in hersku we need 3 information
 1. HERAKU_EMAIL = vrishali1357@gmail.com
-2. HERAKU_API_KEY = a2ff5044-edbc-4939-9931-b8581723f273
+2. HERAKU_API_KEY = <>
 3. HERAKU_APP_NAME = mlproject-1-ineuron
 
 
@@ -72,3 +72,20 @@ To build docker image
 docker build -t <image_name>:<tagname> .
 '''
 Note: Image name for docker must be lowercase
+
+To list docker image
+'''
+docker images
+'''
+Run docker image
+'''
+docker run -p 5000:5000 -e PORT=5000 f8c749e73678
+'''
+To check running container in docker
+'''
+docker ps
+'''
+Tos stop docker conatiner
+'''
+docker stop <container_id>
+'''
