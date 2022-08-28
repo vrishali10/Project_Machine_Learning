@@ -1,6 +1,6 @@
 # Project_Machine_Learning
 
-# Software and account Requirement.
+### Software and account Requirement.
 1. Github Account
 2. Heroku Account
 3. VS Code IDE
@@ -15,20 +15,25 @@ To activate conda env
 '''
 conda activate venv/
 '''
+
 OR
+
 '''
 conda activate venv
 '''
+
 To insatll requirements.txt file
 '''
 pip install -r requirements.txt
 '''
 
 To Add files to git
-''
+'''
 git add .
 '''
+
 OR
+
 '''
 git add <file_name>
 '''
