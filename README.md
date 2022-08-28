@@ -5,7 +5,7 @@
 2. Heroku Account
 3. VS Code IDE
 4. GIT cli
-5. GIT Documentation
+5. GIT Documentation (https://git-scm.com/docs/gittutorial)
 
 Creating conda environment
 '''
@@ -60,3 +60,15 @@ To check remote url
 '''
 git remote -v
 '''
+
+To setup CI/CD pipeline in hersku we need 3 information
+1. HERAKU_EMAIL = vrishali1357@gmail.com
+2. HERAKU_API_KEY = a2ff5044-edbc-4939-9931-b8581723f273
+3. HERAKU_APP_NAME = mlproject-1-ineuron
+
+
+To build docker image
+'''
+docker build -t <image_name>:<tagname> .
+'''
+Note: Image name for docker must be lowercase
