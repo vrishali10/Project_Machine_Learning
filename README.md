@@ -98,3 +98,8 @@ Install ipykernel
 '''
 pip install ipykernel
 '''
+
+Install pyyaml library
+'''
+pip install PyYAML
+'''
