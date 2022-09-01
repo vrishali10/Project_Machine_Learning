@@ -6,3 +6,5 @@ pandas
 PyYAML
 -e .
 matplotlib
+evidently
+dill
