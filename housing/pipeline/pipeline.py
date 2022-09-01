@@ -2,7 +2,7 @@ from collections import namedtuple
 from datetime import datetime
 import uuid
 from housing.config.configuration import Configuartion
-from housing.logger import logging
+from housing.logger import logging, get_log_file_name
 from housing.exception import HousingException
 from threading import Thread
 from typing import List
@@ -13,10 +13,10 @@ from housing.entity.artifact_entity import DataValidationArtifact, DataTransform
 from housing.entity.config_entity import DataIngestionConfig, ModelEvaluationConfig
 from housing.component.data_ingestion import DataIngestion
 from housing.component.data_validation import DataValidation
-# from housing.component.data_transformation import DataTransformation
-# from housing.component.model_trainer import ModelTrainer
-# from housing.component.model_evaluation import ModelEvaluation
-# from housing.component.model_pusher import ModelPusher
+from housing.component.data_transformation import DataTransformation
+from housing.component.model_trainer import ModelTrainer
+from housing.component.model_evaluation import ModelEvaluation
+from housing.component.model_pusher import ModelPusher
 import os, sys
 from collections import namedtuple
 from datetime import datetime
@@ -74,8 +74,7 @@ class Pipeline(Thread):
             return data_transformation.initiate_data_transformation()
         except Exception as e:
             raise HousingException(e, sys)
-    
-    """
+
     def start_model_trainer(self, data_transformation_artifact: DataTransformationArtifact) -> ModelTrainerArtifact:
         try:
             model_trainer = ModelTrainer(model_trainer_config=self.config.get_model_trainer_config(),
@@ -84,10 +83,7 @@ class Pipeline(Thread):
             return model_trainer.initiate_model_trainer()
         except Exception as e:
             raise HousingException(e, sys) from e
-    """
-    
 
-    """
     def start_model_evaluation(self, data_ingestion_artifact: DataIngestionArtifact,
                                data_validation_artifact: DataValidationArtifact,
                                model_trainer_artifact: ModelTrainerArtifact) -> ModelEvaluationArtifact:
@@ -100,10 +96,7 @@ class Pipeline(Thread):
             return model_eval.initiate_model_evaluation()
         except Exception as e:
             raise HousingException(e, sys) from e
-    """
-    
 
-    """
     def start_model_pusher(self, model_eval_artifact: ModelEvaluationArtifact) -> ModelPusherArtifact:
         try:
             model_pusher = ModelPusher(
@@ -113,8 +106,7 @@ class Pipeline(Thread):
             return model_pusher.initiate_model_pusher()
         except Exception as e:
             raise HousingException(e, sys) from e
-    """
-    
+
     def run_pipeline(self):
         try:
             if Pipeline.experiment.running_status:
