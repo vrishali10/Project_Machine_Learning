@@ -61,7 +61,6 @@ class Pipeline(Thread):
         except Exception as e:
             raise HousingException(e, sys) from e
 
-    """
     def start_data_transformation(self,
                                   data_ingestion_artifact: DataIngestionArtifact,
                                   data_validation_artifact: DataValidationArtifact
@@ -75,8 +74,6 @@ class Pipeline(Thread):
             return data_transformation.initiate_data_transformation()
         except Exception as e:
             raise HousingException(e, sys)
-
-    """
     
     """
     def start_model_trainer(self, data_transformation_artifact: DataTransformationArtifact) -> ModelTrainerArtifact:
