@@ -1,5 +1,7 @@
 best_model:
-  model_path: D:\RRG\VP\INeuron\House_Price_Prediction\Project_Machine_Learning\housing\artifact\model_trainer\2022-09-02-14-06-25\trained_model\model.pkl
+  model_path: D:\RRG\VP\INeuron\House_Price_Prediction\Project_Machine_Learning\housing\artifact\model_trainer\2022-09-02-19-46-30\trained_model\model.pkl
 history:
   2022-09-02-14-06-25:
     model_path: D:\RRG\VP\INeuron\House_Price_Prediction\Project_Machine_Learning\housing\artifact\model_trainer\2022-09-01-21-33-01\trained_model\model.pkl
+  2022-09-02-19-46-30:
+    model_path: D:\RRG\VP\INeuron\House_Price_Prediction\Project_Machine_Learning\housing\artifact\model_trainer\2022-09-02-14-06-25\trained_model\model.pkl
